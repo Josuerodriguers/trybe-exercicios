@@ -1,0 +1,130 @@
+let status = 'desligado';
+
+const ligarDesligar = (status) => {
+    
+    if (status === 'desligado') {
+      status = 'ligado';
+    } else {
+      status = 'desligado';
+    }
+    console.log(`O motor está ${ligaDesliga(status)}`);
+    return status;
+  };
+
+  //area de um círculo (Crie uma função que calcule a área de um círculo)
+
+  const cicleArea = (area) => {
+    const PI = 3.14;
+
+    let area = PI * (area ** 2);
+
+    return `Esta é a área do círculo: ${area}`;
+  };
+
+
+
+  const circleArea = (radius) => {
+    const PI = 3.14;
+
+    if(typeof radius !== 'number') {
+      return 'O parâmetro radius deve ser um número';
+    }
+  
+    let area = PI * (radius ** 2);
+    return `Esta é a área do círculo: ${area}`;
+  };
+  
+
+// Maior Palavra
+
+  function maiorPalavra(frase) {
+    // Separa a frase em palavras usando o espaço como separador
+    const palavras = frase.split(" ");
+    let maior = "";
+    for (let i = 0; i < palavras.length; i++) {
+      // Verifica se a palavra atual é maior do que a palavra armazenada na variável "maior"
+      if (palavras[i].length > maior.length) {
+        maior = palavras[i];
+      }
+    }
+    return maior;
+  }
+
+  const frase = "O rato roeu a roupa do rei de Roma";
+  const maior = maiorPalavra(frase);
+  console.log(maior); 
+  
+  function highestCount(arr) {
+    const max = Math.max(...arr);
+    return arr.filter(num => num === max).length; 
+  }
+  const arr = [9, 1, 2, 3, 9, 5, 7];
+  console.log(highestCount(arr));
+
+
+const calcTriangleArea = (base, height) => (base * height) / 2;
+const calcRectangleArea = (base, height) => (base * height);
+const calcAllAreas = (base, height, form) => {
+  let area = 0;
+  if (area = calcTriangleArea(base, height);) {
+    return `O valor da área do ${form} é de: ${area}`;
+  } if (area = calcRectangleArea(base, height);) {
+    return  `O valor da área do ${form} é de: ${area}`;
+  }
+  return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+};
+
+/*const calcTriangleArea = (base, height) => (base * height) / 2;
+const calcRectangleArea = (base, height) => (base * height);
+const calcAllAreas = (base, height, form) => {
+  let area = 0;
+  switch (form) {
+  case 'triângulo':
+    area = calcTriangleArea(base, height);
+    return `O valor da área do ${form} é de: ${area}`;
+  case 'retângulo':
+    area = calcRectangleArea(base, height);
+    return `O valor da área do ${form} é de: ${area}`;
+  default:
+    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+};
+  
+
+const calcTriangleArea = (base, height) => (base * height) / 2;
+const calcRectangleArea = (base, height) => (base * height);
+const calcAllAreas = (base, height, form) => {
+  let area = 0;
+  switch (form) {
+  case 'triângulo':
+    area = calcTriangleArea(base, height);
+    return `O valor da área do ${form} é de: ${area}`;
+  case 'retângulo':
+    area = calcRectangleArea(base, height);
+    return `O valor da área do ${form} é de: ${area}`;
+  default:
+    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  }
+};
+
+const fizzBuzz = (array) => array.map((num) => {
+  if (num % 3 === 0) {
+    return 'fizz';
+  } if (num % 5 === 0) {
+    return 'buzz';
+  } if (num % 3 === 0 && num % 5 === 0){
+    return 'fizzbug';
+  }
+  return 'bug!';
+};)
+
+const fizzBuzz = (arr) => arr.map((num) => {
+  if (num % 3 === 0) {
+    return 'fizz';
+  } if (num % 5 === 0) {
+    return 'buzz';
+  } if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzbug';
+  }
+  return 'bug!';
+});
