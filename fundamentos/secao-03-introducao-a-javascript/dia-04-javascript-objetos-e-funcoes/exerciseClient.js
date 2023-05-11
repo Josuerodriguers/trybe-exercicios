@@ -35,13 +35,23 @@ let order = {
   };
   
   function customerInfo(order) {
-    return 'Olá ' + order.order.delivery.deliveryPerson + ' entrega para: ' + order.name +  ', Telefone: ' + order.phoneNumber + ' R. ' + order.address.street + ', Nº: ' + order.address.number + ', AP:' + order.address.apartment;
+    //return 'Olá ' + order.order.delivery.deliveryPerson + ' entrega para: ' + order.name +  ', Telefone: ' + order.phoneNumber + ' R. ' + order.address.street + ', Nº: ' + order.address.number + ', AP:' + order.address.apartment;
+
+    return `Olá ${order.order.delivery.deliveryPerson} entrega para: ${order.name} ,Telefone: ${order.phoneNumber} R. ${order.address.street} , Nº: ${order.address.number} , AP: ${order.address.apartment}`
   }
-  console.log(customerInfo(order));
+  //console.log(customerInfo(order));
   customerInfo(order);
   
-  function orderModifier(order) {
-    // Adicione abaixo as informações necessárias.
+ 
+function orderModifier(order) {
+    let newBuyer = order.name = 'Luiz Silva';
+    let newTotal = order.payment.total = '50';
+    let pizzas = Object.keys(order.order.pizza);
+    let drinks = order.order.drinks.coke.type;
+  
+    return ('Olá ' + newBuyer + ', o total do seu pedido de ' + pizzas[0] + ', ' + pizzas[1] + ' e ' + drinks + ' é R$ ' + newTotal + ',00.');
   }
+  console.log(orderModifier(order));
   
   orderModifier(order);
+ 
