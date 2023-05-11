@@ -1,0 +1,21 @@
+.cor-primaria:hover{
+    background-color:yellow ;
+}
+
+.cor-secundaria:hover{
+        background-color: orange;
+}
+
+.cor-complementar:hover{
+
+    background-color: gray;
+}
+
+.cor-escura:hover{
+    background-color: black;
+}
+
+.cor-clara:hover{
+
+    background-color: white;
+}
