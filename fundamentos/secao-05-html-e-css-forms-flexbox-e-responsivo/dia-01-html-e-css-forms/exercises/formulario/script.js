@@ -11,3 +11,10 @@ const hrefLink = document.querySelector("#href");
     inputCheckbox.addEventListener("click", (event) => {
         event.preventDefault();
     });
+
+    inputText.addEventListener("keypress", (event) => {
+        const character = event.key;
+        if (character !== "a") {
+            event.preventDefault();
+        }
+    });
