@@ -49,3 +49,4 @@ const people = [
 
     console.log(verifyAges(peoples, 37));
     console.log(verifyAges(peoples, 28));
+
