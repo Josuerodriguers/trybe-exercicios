@@ -1,0 +1,100 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  margin: 0;
+  color: rgb(252, 251, 251);
+  justify-content: center;
+  display: flex;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  background-color: rgb(32, 32, 32);
+  justify-content: center;
+  display: flex;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin: 10px;
+  width: 100px;
+  border: none;
+  padding: 7px;
+  border-radius: 3px;
+  background-color: rgb(228, 228, 228);
+  cursor: pointer;
+  font-weight: 600;
+  justify-content: center;
+  display: flex;
+}
+
+button:hover {
+  background-color: rgb(207, 228, 255);
+}
+
+button:active {
+  background-color: rgb(228, 228, 228);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  box-shadow: 3px 3px 10px rgb(66, 66, 66);
+  font-size: large;
+  padding: 2px 15px;
+  --angle: 0deg;
+  border: 3px solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+
+  animation: 5s rotate linear infinite;
+}
+
+input:focus {
+  outline: none;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
